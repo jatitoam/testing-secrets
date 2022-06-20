@@ -11,4 +11,4 @@ jobs:
    steps:
      - uses: actions/checkout@v3
      - run: echo ${{ secrets.MY_SECRET }}
-     - run: "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\"Hello, World!\"}' ${{ secrets.SK }}"
+     - run: "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\"Hello, World! ${{ secrets.MY_SECRET }}\"}' ${{ secrets.SK }}"
